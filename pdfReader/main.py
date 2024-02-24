@@ -7,7 +7,7 @@ import requests
 from PyPDF2 import PdfReader
 
 try:
-    pdf = PdfReader('/home/druhip/Desktop/Code/pdfReader/dataset.pdf')  
+    pdf = PdfReader('pdfReader/dataset.pdf')  
     result = ''
     for i in range(len(pdf.pages)):
         result += pdf.pages[i].extract_text()
