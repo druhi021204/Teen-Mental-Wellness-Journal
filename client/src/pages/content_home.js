@@ -14,18 +14,18 @@
 import React, { useEffect, useState } from 'react';
 // import Footer from './Footer';
 import { Loader } from "@googlemaps/js-api-loader";
-
+import brain from '../pictures/brain.jpg'
 export default function ContentHome() {
     const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
 
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        const img = new Image();
-        img.src = "./brain.jpg";
-        img.onload = () => {
-            setImageDimensions({ width: img.width, height: img.height });
-        };
+        // const img = new Image();
+        // img.src = "../pictures/brain.jpg";
+        // img.onload = () => {
+        //     setImageDimensions({ width: img.width, height: img.height });
+        // };
 
         const loader = new Loader({
             apiKey: 'AIzaSyD48hQw8EEsHM_r2RyF2Mlos0c_E7jYe7U', 
@@ -130,21 +130,23 @@ export default function ContentHome() {
                     <div className='image ml-auto mr-32 mt-8'>
                         <div style={div2style}>
                             <div style={divStyle}>
-                                <img src="./brain.jpg" alt="my" className='rounded-full' />
+                                <img src={brain} width={50} height={50} />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='feat1 flex mt-20 px-24'>
                     <div className='map bg-black w-1/2 h-96' id="map"></div>
-                    <div className=' nearby w-1/2 bg-slate-800'>
-                        <div className=' font-serif text-white text-3xl ml-10 mt-12 text-center'>
-                            Contact Professionals
-                        </div>
-                        <div className=' font-bold ml-auto mr-28 py-6 w-2/3 bg-neutral-500 rounded-xl text-white text-xl text-center  mt-8 font-serif'>
+                    <div className=' nearby w-1/2 bg-slate-800 flex justify-center items-center'>
+                        <div>
+                            <div className='font-serif text-white text-3xl text-center'>
+                                Contact Professionals
+                            </div>
+                            <div className=' bg-neutral-500  rounded-xl text-white text-xl p-4 m-4 text-center'>
                             <p>Rajesh Shetty</p><br />
                             <p>Contact info: 9897654621</p>
                             Email id : rajeshshetty@gmail.com
+                        </div>
                         </div>
                     </div>
                 </div>

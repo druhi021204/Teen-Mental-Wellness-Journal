@@ -167,7 +167,7 @@ function Exercise() {
   const [showSleep, setShowSleep] = useState(false);
   return (
     <div>
-      <div className="p-10 bg-slate-300">
+      <div className="p-10 pt-36">
         <div className="flex justify-center">
           <h1 className="font-extrabold text-4xl font-serif color">
             Mindful Movement

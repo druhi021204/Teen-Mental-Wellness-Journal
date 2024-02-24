@@ -9,7 +9,7 @@ export default function Footer() {
       }
     return (
         <footer className='bg-dark text-center text-light py-3' style = {footerstyle}>
-         Copyright &copy; WAKEFUL WORKFORCE.com
+         Copyright &copy; SHIFT HAPPENS.com
         </footer>
        )
 }

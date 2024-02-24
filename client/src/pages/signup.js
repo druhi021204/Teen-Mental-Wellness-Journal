@@ -30,7 +30,7 @@ const Signup = () => {
             </div>
         <div className="signup">
             {/* <img src={logo} width={70} height={50}/> */}
-            <h2>Theek Hu</h2>
+            <h2>Shift Happens</h2>
             {/* <span role="img" aria-label="rocket">🚀</span> */}
             <form onSubmit = {handleSubmit}>
                 <label>Username:</label>
