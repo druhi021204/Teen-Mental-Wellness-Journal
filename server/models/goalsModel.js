@@ -43,5 +43,5 @@ const goalSchema = new Schema ({
 //     return data
 // }
 
-const Goals = mongoose.model('Goals', goalSchema)
+const Goals = new mongoose.model('Goals', goalSchema)
 module.exports=Goals;

@@ -1,11 +1,35 @@
+import { useEffect } from "react";
+import { useGoalContext } from "../hooks/useGoalContext";
+import GoalDetails from "../components/goalDetails";
+import GoalForm from "../components/goalform";
+
 const Goals = () => {
-    return ( 
+    const { goals, dispatch } = useGoalContext();
+
+    useEffect(() => {
+        const fetchGoals = async () => {
+            const response = await fetch('/api/goal');
+            const json = await response.json();
+
+            if (response.ok) {
+                dispatch({ type: 'SET_GOALS', payload: json });
+            }
+        };
+
+        fetchGoals();
+    }, [dispatch]);
+
+    return (
         <div className="displaygoals">
-        <h6>hello</h6>
-        <p>sdfghjkl</p>
-        <p>sdfghjkl</p>
+            <div className="goalss">
+                {goals && goals.map(goal => (
+                    <GoalDetails goal={goal} key={goal._id} />
+                ))}
+            </div>
+
+            <GoalForm />
         </div>
-     );
-}
- 
+    );
+};
+
 export default Goals;

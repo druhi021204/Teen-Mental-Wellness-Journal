@@ -1,5 +1,5 @@
 const express = require('express')
-const {getGoal,createGoal} = require('../controllers/goalController')
+const {getGoal,createGoal, deleteGoal, getGoals} = require('../controllers/goalController')
 // const requireAuth = require('../middleware/requireAuth')
 const router = express.Router()
 // router.use(requireAuth)
@@ -10,5 +10,7 @@ const router = express.Router()
 // POST a new data
 router.post('/add', createGoal)
 router.get('/:id', getGoal)
+router.get('/', getGoals)
+router.delete('/:id', deleteGoal)
 
 module.exports = router
