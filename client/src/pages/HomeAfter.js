@@ -1,6 +1,8 @@
 import { useAuthContext } from "../hooks/useAuthContext";
 import { Link } from "react-router-dom";
-// import {goalimg} from '../pictures/goals.jpg'
+import goalspg from '../pictures/goals.jpg'
+import mind from '../pictures/mind.png'
+import mood from '../pictures/moodTracker.png'
 
 document.body.style = "background: #e2e8f0";
 const HomeAfter = () => {
@@ -16,9 +18,10 @@ const HomeAfter = () => {
             <div className="h-full">
               <div className="flex justify-center w-full">
                 <div className="bg-slate-100 h-1/3 w-1/3 flex justify-center p-20 rounded-2xl m-10">
-                  <p>Mood Tracking</p>
+                  <img src={mood}></img>
                 </div>
                 <div className="h-1/3 w-1/3 pt-20 ">
+                <p className='font-bold'>Mood Tracking</p>
                   <p>Track your Moods, emotions and stress Levels</p>
                 </div>
               </div>
@@ -26,9 +29,10 @@ const HomeAfter = () => {
               <a href="/exercise">
                 <div className="flex justify-center w-full">
                 <div className="bg-slate-100 h-1/3 w-1/3 flex justify-center p-20 rounded-2xl m-10">
-                    <p>Mindfulness Exercise</p>
+                    <img src={mind}></img>
                   </div>
                   <div className="h-1/3 w-1/3 pt-20 ">
+                  <p className='font-bold'>Mindfulness Exercise</p>
                     <p>
                       View the Relaxation exercises to help teenagers manage
                       stress and anixety
@@ -39,9 +43,10 @@ const HomeAfter = () => {
               <a href="/goals">
                 <div className="flex justify-center w-full">
                 <div className="bg-slate-100 h-1/3 w-1/3 flex justify-center p-20 rounded-2xl m-10">
-                    <p>Goal Setting</p>
+                  <img src={goalspg}></img>
                   </div>
                   <div className="h-1/3 w-1/3 pt-20 ">
+                  <p className='font-bold'>Goal Setting</p>
                     <p>Set and Track Personal wellness Goals</p>
                   </div>
                 </div>

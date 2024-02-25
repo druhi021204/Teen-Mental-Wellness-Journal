@@ -11,12 +11,13 @@ import Profile from "./pages/profile";
 // import News from "./pages/news";
 // import ImageSliding from "./pages/imageSliding";
 import MainForm from "./pages/mainform";
-import DataDetails from "./pages/DataDetails";
+// import DataDetails from "./pages/DataDetails";
 import { useDataContext } from "./hooks/useDataContext";
 // import CompanyDetails from "./pages/getstock";
 import Goals from "./pages/getgoal";
-import Exercise from "./pages/exercise.js";
-import Footer from "./pages/footer.js";
+import Exercise from "./pages/exercise";
+import Footer from "./pages/footer";
+import ChatBotPage from "./pages/chatbot";
 // function App() {
 //   return (
 //   //  <Router>
@@ -118,10 +119,11 @@ function App() {
          <Route path="/profile" element={user ? <ProfilePage /> : <Navigate to="/signup"/>} />
          <Route path="/contactus" element={<ContactUsPage />} />
          <Route path="/mainform" element={!data ?<Mainform/> : <Navigate to ="/results"/>}/>
-         <Route path="/results" element={<DataDetail/>}/>
+         {/* <Route path="/results" element={<DataDetail/>}/> */}
          <Route path="/explore" element={<GetStock/>}/>
          <Route path="/goals" element={<GetGoal/>}/>
          <Route path="/exercise" element={<GetExercise/>}/>
+         <Route path="/chatbot" element={<ChatBot/>}/>
 
        </Routes>
      </BrowserRouter>
@@ -137,7 +139,14 @@ function App() {
      </div>
    );
  }
-
+function ChatBot() 
+{
+   return (
+      <div>
+         <ChatBotPage/>
+      </div>
+   )
+}
  function Signuppage() {
    return (
       <div>
@@ -173,6 +182,7 @@ function GetGoal() {
       <>
       <div className="goalspage">
          <Navbar/>
+         {/* <Goals/> */}
       </div>
 
       <div className="goalspg">
@@ -283,19 +293,19 @@ function Mainform() {
   );
 }
 
-function DataDetail() {
-   return (
-      <div>
-         <div className="datadetailpage">
-                <Navbar/>
-         </div>
+// function DataDetail() {
+//    return (
+//       <div>
+//          <div className="datadetailpage">
+//                 <Navbar/>
+//          </div>
  
-               <div className="datadetailpg">
-                  <DataDetails/>
-               </div>
-      </div>
-   );
- }
+//                <div className="datadetailpg">
+//                   <DataDetails/>
+//                </div>
+//       </div>
+//    );
+//  }
 
 
 export default App;

@@ -4,7 +4,7 @@ import './style.css';
 import App from './App';
 import { AuthContextProvider } from './context/Authcontext';
 import { DataContextProvider } from './context/DataContext';
-
+import { GoalContextProvider } from './context/goalContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +12,9 @@ root.render(
 
     <AuthContextProvider>
       <DataContextProvider>
+      <GoalContextProvider>
           <App />    
+      </GoalContextProvider>
       </DataContextProvider>
     </AuthContextProvider>
 

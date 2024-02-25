@@ -15,12 +15,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky z-10 w-full top-0 bg-slate-300 shadow-xl flex p-8 justify-between">
-      <div className="logo ">
+    <nav className="sticky z-10 w-full top-0 bg-slate-300 shadow-xl flex p-6  justify-between items-center">
+      <div className="logo ml-7 ">
         <img src={logo} width={50} height={50} />
       </div>
 
-      <div>
+      <div className="my-3 ">
         {user && (
           <>
             <Link
@@ -37,10 +37,10 @@ const Navbar = () => {
             </Link>
             {/* <a href = "/signup">Sign Up</a> */}
             <a
-              href="/explore"
+              href="/chatbot"
               className="mx-10 text-2xl font-bold  transition ease-out duration-500 font-serif"
             >
-              Explore
+              Chatbot
             </a>
             {/* <a href = "/contactus">Contact Us</a> */}
             <Link to="/">

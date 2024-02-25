@@ -13,9 +13,14 @@ const mongoose = require('mongoose')
 
 //     res.status(200).json(data)
 // }
+const getGoals = async (req, res) => {
+    const goals = await Goals.find({}).sort({createdAt: -1})
+  
+    res.status(200).json(goals)
+  }
 
 const getGoal = async (req, res) => {
-    const {id} = req. params
+    const {id} = req.params
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(404).json({error: 'No such goal'})
@@ -69,4 +74,20 @@ const createGoal = async (req, res) => {
       }
 }
 
-module.exports = { getGoal,createGoal}
+const deleteGoal = async (req, res) => {
+    const { id } = req.params
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({error: 'No such goal'})
+    }
+  
+    const goal = await Goals.findOneAndDelete({_id: id})
+  
+    if(!goal) {
+      return res.status(400).json({error: 'No such goal'})
+    }
+  
+    res.status(200).json(goal)
+}
+
+module.exports = { getGoals,getGoal,createGoal, deleteGoal}

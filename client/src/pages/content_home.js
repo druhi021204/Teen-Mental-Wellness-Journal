@@ -1,4 +1,3 @@
-
 // const ContentHome = () => {
 //     return ( 
 //         // <div className="info">

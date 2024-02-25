@@ -170,7 +170,7 @@ function Exercise() {
       <div className="p-10 pt-36">
         <div className="flex justify-center">
           <h1 className="font-extrabold text-4xl font-serif color">
-            Mindful Movement
+            Mindful Exercises
           </h1>
         </div>
         <p className="flex pl-60 pr-60">
