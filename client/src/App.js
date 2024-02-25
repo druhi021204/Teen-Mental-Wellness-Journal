@@ -15,9 +15,11 @@ import MainForm from "./pages/mainform";
 import { useDataContext } from "./hooks/useDataContext";
 // import CompanyDetails from "./pages/getstock";
 import Goals from "./pages/getgoal";
-import Exercise from "./pages/exercise";
-import Footer from "./pages/footer";
+
 import ChatBotPage from "./pages/chatbot";
+import Exercise from "./pages/exercise.js";
+import Footer from "./pages/footer.js";
+import Mood from "./pages/moodpage.js";
 // function App() {
 //   return (
 //   //  <Router>
@@ -217,6 +219,7 @@ function GetStock() {
 
       <div className="getstockpg">
             {/* <CompanyDetails/> */}
+            <Mood/>
       </div>
       </div>
    )
